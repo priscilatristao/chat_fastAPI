@@ -12,7 +12,7 @@ Prof.: Fabricio Dias
 MARICÁ - RJ
 2024
 -----------------------
-INTRODUÇÃO
+INTRODUÇÃO: 
   Criação de aplicação de chat em tempo real, com FastAPI + Redis.
 
   FastAPI para criar as rotas e redis para salvar a conversa dos chats no banco de dados.
