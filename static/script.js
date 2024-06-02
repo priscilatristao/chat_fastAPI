@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const clientId = Math.floor(Math.random() * 1000); // Gerar um ID de cliente aleatório
-    const websocket = new WebSocket(`ws://localhost:8000/ws/${clientId}`);
+    const websocket = new WebSocket(`redis-19192.c289.us-west-1-2.ec2.redns.redis-cloud.com:19192/${clientId}`);
 
     const messagesDiv = document.getElementById("messages");
     const messageInput = document.getElementById("messageInput");
