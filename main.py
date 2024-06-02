@@ -12,7 +12,7 @@ redis = None
 @app.on_event("startup")
 async def startup():
     global redis
-    redis = await aioredis.create_redis_pool("redis://localhost")
+    redis = await aioredis.create_redis_pool("redis-19192.c289.us-west-1-2.ec2.redns.redis-cloud.com:19192")
 
 @app.on_event("shutdown")
 async def shutdown():
@@ -20,7 +20,7 @@ async def shutdown():
     await redis.wait_closed()
 
 # Rota para lidar com conexões WebSocket
-@app.websocket("/ws/{client_id}")
+@app.websocket("/Priscila-free-db/{client_id}")
 async def websocket_endpoint(websocket: WebSocket, client_id: int):
     await websocket.accept()
     await redis.sadd("active_connections", client_id)
